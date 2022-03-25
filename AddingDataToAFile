@@ -1,0 +1,23 @@
+def ex():
+    import pickle
+    Y = "y"
+    y = "y"
+    Add = "add"
+    while Y == y:
+        # students = int(input("Enter the number of students in the class : "))
+        print("First enter the score of the student and next enter student name")
+        dictionary = dict()
+        # for i in range(students):
+        add = input("please enter 'add' or 'read' if you want to enter students again")
+        if "add" == add:
+            dictionary[input("student name : ")] = int(input("score : "))
+            print(dictionary)
+        add = input("please enter 'add' or 'read' if you want to enter students again")
+        # if "add"== add :
+            # some = dictionary[input("student name : ")] = int(input("score : "))
+            # dictionary.add(some)
+        my_file = open("student.txt", "wb")
+        pickle.dump(dictionary, my_file)
+
+
+ex()
