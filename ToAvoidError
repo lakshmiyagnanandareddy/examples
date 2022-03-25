@@ -1,0 +1,10 @@
+def error():
+    repeat = True
+    while repeat == True :
+        try:
+            number = int(input("Enter the number for the error "))
+            print(number)
+            repeat = False
+        except:
+            print("wrong entry")
+            repeat == True
